@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
+import Profile from './components/profile';
 import logo from './logo.svg';
 import './App.css';
+import NewComponent from './components/new-components/newcomponent';
 
 class App extends Component {
+
   render() {
+    let names = ["Justin"]
+    let profiles = names.map((name)=> <Profile name={name}/>)
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Git Workshop</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div>
+          {profiles}
+        </div>
+        <div>
+          <NewComponent />
+        </div>
       </div>
     );
   }
