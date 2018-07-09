@@ -7,7 +7,7 @@ import NewComponent from './components/new-components/newcomponent';
 class App extends Component {
 
   render() {
-    let names = ["Justin", "Chrissy", "Harry Potter"]
+    let names = ["Justin", "Chrissy", "Draco Malfoy", "Harry Potter"]
     let profiles = names.map((name)=> <Profile name={name}/>)
     return (
       <div className="App">
